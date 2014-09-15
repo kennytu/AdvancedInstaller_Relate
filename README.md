@@ -3,15 +3,16 @@
 ##Using command line to build AdvancedInstaller Project
 
 ### Normal Node 
-* advancedinstaller /build OrbWeb.Me.aip
-* advancedinstaller /rebuild OrbWeb.Me.zip
+* AdvancedInstaller.com /build OrbWeb.Me.aip
+* AdvancedInstaller.com /rebuild OrbWeb.Me.zip
 
 ### Slient mode
 
-* advancedinstaller /build OrbWeb.Me.aip > null 
-* advancedinstaller /rebuild OrbWeb.Me.aip > null
+* AdvancedInstaller.com /build OrbWeb.Me.aip > NUL
+* AdvancedInstaller.com /rebuild OrbWeb.Me.aip > NUL
 
 
 ### Example
 
  The OrbWeb.Me.aip is the AdvancedInstaller project file for example
+
