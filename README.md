@@ -2,7 +2,7 @@
 
 ##Using command line to build AdvancedInstaller Project
 
-### Normal Node 
+### Normal Mode 
 * AdvancedInstaller.com /build OrbWeb.Me.aip
 * AdvancedInstaller.com /rebuild OrbWeb.Me.aip
 
