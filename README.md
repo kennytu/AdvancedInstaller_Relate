@@ -20,7 +20,7 @@
 ##Using command line to run executable binary via silent mode
 
 * You need to have the Administrator Owner.
-* Run the executable file and add the postfix "**/qn**, or **/quiet**", for example, to run **orbweb.me.exe /qn***, the windows installer will install this package quietly
+* Run the executable file and add the postfix "**/qn**, or **/quiet**", for example, to run **orbweb.me.exe /qn**, the windows installer will install this package quietly
 
 
 ##Reference 
