@@ -4,7 +4,7 @@
 
 ### Normal Node 
 * AdvancedInstaller.com /build OrbWeb.Me.aip
-* AdvancedInstaller.com /rebuild OrbWeb.Me.zip
+* AdvancedInstaller.com /rebuild OrbWeb.Me.aip
 
 ### Slient mode
 
