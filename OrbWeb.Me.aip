@@ -2,18 +2,24 @@
 <DOCUMENT Type="Advanced Installer" CreateVersion="11.4.1" version="11.4.1" Modules="professional" RootPath="." Language="zh_TW" Id="{D641A690-F9D2-4873-93DC-F1E90A138C7B}">
   <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
     <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
+    <ROW Property="AI_COLOR_DISABLED_TEXT" Value="3026478" MsiKey="AI_COLOR_DISABLED_TEXT"/>
+    <ROW Property="AI_CONTROL_VISUAL_STYLE" Value="2960685;4276545;6776679;16176031" MsiKey="AI_CONTROL_VISUAL_STYLE"/>
+    <ROW Property="AI_CONTROL_VISUAL_STYLE_EX" Value="1513239;3026478;3026478" MsiKey="AI_CONTROL_VISUAL_STYLE_EX"/>
+    <ROW Property="AI_CONTROL_VISUAL_STYLE_FLAT" MsiKey="AI_CONTROL_VISUAL_STYLE_FLAT"/>
     <ROW Property="AI_EXTERNALUIUNINSTALLERNAME" MultiBuildValue="DefaultBuild:aiui"/>
     <ROW Property="AI_FINDEXE_TITLE" Value="選擇 [|ProductName] 安裝套件" ValueLocId="AI.Property.FindExeTitle"/>
-    <ROW Property="AI_PRODUCTNAME_ARP" Value="[|ProductName]"/>
-    <ROW Property="AI_UNINSTALLER" Value="msiexec.exe"/>
+    <ROW Property="AI_FrameBtnsColor" Value="metroblack" MsiKey="AI_FrameBtnsColor"/>
+    <ROW Property="AI_FrameColor" Value="metroblack" MsiKey="AI_FrameColor"/>
+    <ROW Property="AI_NO_BORDER_NORMAL" MsiKey="AI_NO_BORDER_NORMAL"/>
+    <ROW Property="AI_SHORTCUTSREG" Value="0|0|0|0|"/>
+    <ROW Property="AI_ThemeStyle" Value="default" MsiKey="AI_ThemeStyle"/>
+    <ROW Property="AI_ThemeStyleEx" Value="border" MsiKey="AI_ThemeStyleEx"/>
     <ROW Property="ALLUSERS" Value="1"/>
     <ROW Property="ARPCOMMENTS" Value="此 Installer 資料庫包含了安裝 [|ProductName] 所需的邏輯和資料。" ValueLocId="*"/>
-    <ROW Property="ARPNOREPAIR" Value="1"/>
     <ROW Property="ARPPRODUCTICON" Value="kloudianpackage.exe" Type="8"/>
-    <ROW Property="ARPSYSTEMCOMPONENT" Value="1"/>
+    <ROW Property="AiPreventAutoPin" Value="System.AppUserModel.ExcludeFromShowInNewInstall"/>
     <ROW Property="Manufacturer" Value="Kloudian"/>
-    <ROW Property="MsiLogging" MultiBuildValue="DefaultBuild:v"/>
-    <ROW Property="ProductCode" Value="1028:{17BA607B-2529-4B5E-8837-93E116C7D78D} " Type="16"/>
+    <ROW Property="ProductCode" Value="1028:{17BA607B-2529-4B5E-8837-93E116C7D78D} 2052:{529AA653-70B4-430B-84BA-004128283FE3} 1036:{4180355D-9690-4AE0-A6EA-2DDFF896DD4D} 1033:{CA7EFA43-7E02-491D-803F-300861A4368B} 1041:{55C5C9C7-3185-4B5D-BF34-54EEFBB9766F} 1049:{3F24658C-F660-4F5E-8196-EAC2FD71361B} 1031:{04EC8B0C-F839-4F35-99BA-9CC49A8302CE} 1042:{BCA30CFA-2866-463F-8831-435309A32932} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1028"/>
     <ROW Property="ProductName" Value="orbweb.me"/>
     <ROW Property="ProductVersion" Value="1.2.5" Type="32"/>
@@ -21,8 +27,12 @@
     <ROW Property="UpgradeCode" Value="{101BFA87-0A95-4C6F-86E4-8FA7E999C98D}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
     <ROW Property="WindowsType9XDisplay" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT" MultiBuildValue="DefaultBuild:Windows 2000, Windows 2000 Service Pack 1, Windows 2000 Service Pack 2, Windows 2000 Service Pack 3, Windows 2000 Service Pack 4, Windows XP x86, Windows XP x86 Service Pack 1, Windows XP x86 Service Pack 2, Windows XP x86 Service Pack 3, Windows Server 2003 x86, Windows Server 2003 x86 Service Pack 1, Windows Server 2003 x86 Service Pack 2, Windows Vista x86, Windows Vista x86 Service Pack 1, Windows Vista x86 Service Pack 2, Windows Server 2008 x86" ValueLocId="-"/>
     <ROW Property="WindowsTypeNT40" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
     <ROW Property="WindowsTypeNT40Display" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT64" MultiBuildValue="DefaultBuild:Windows XP x64, Windows XP x64 Service Pack 1, Windows XP x64 Service Pack 2, Windows Vista x64, Windows Vista x64 Service Pack 1, Windows Vista x64 Service Pack 2, Windows Server 2008 x64, Windows Server 2008 R2 x64, Windows Server 2008 R2 x64 Service Pack 1, Windows Server 2012 x64, Windows Server 2012 R2 x64" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT64Display" MultiBuildValue="DefaultBuild:Windows XP x64, Windows Vista x64, Windows Server 2008 x64, Windows Server 2008 R2 x64, Windows Server 2012 x64, Windows Server 2012 R2 x64" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNTDisplay" MultiBuildValue="DefaultBuild:Windows 2000, Windows XP x86, Windows Server 2003 x86, Windows Vista x86, Windows Server 2008 x86" ValueLocId="-"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
     <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
@@ -34,7 +44,6 @@
     <ROW Directory="PROTDRV_Dir" Directory_Parent="modules_Dir" DefaultDir="PROTDRV"/>
     <ROW Directory="QuickLaunch_Dir" Directory_Parent="InternetExplorer_Dir" DefaultDir="QUICKL~1|Quick Launch"/>
     <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
-    <ROW Directory="StartMenuFolder" Directory_Parent="TARGETDIR" DefaultDir="STARTM~1|StartMenuFolder" IsPseudoRoot="1"/>
     <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
     <ROW Directory="__1_Dir" Directory_Parent="win7_Dir" DefaultDir="64"/>
     <ROW Directory="__2_Dir" Directory_Parent="win8_Dir" DefaultDir="32"/>
@@ -259,7 +268,7 @@
     <ROW Directory="zoneinfo_Dir" Directory_Parent="dateutil_Dir" DefaultDir="zoneinfo"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
-    <ROW Component="AI_CustomARPName" ComponentId="{D9A1446F-06F9-4F2E-B6B4-211295A92924}" Directory_="APPDIR" Attributes="4" KeyPath="DisplayName" Options="1"/>
+    <ROW Component="AIShRegAnswer" ComponentId="{F493D6B3-35AD-4D6E-BF61-5066059A9245}" Directory_="APPDIR" Attributes="4" KeyPath="AIShRegAnswer"/>
     <ROW Component="AI_ExePath" ComponentId="{B3B2DC15-0912-4007-A42A-9F06E9BDFEF2}" Directory_="APPDIR" Attributes="4" KeyPath="AI_ExePath"/>
     <ROW Component="APIMSWinCoreLocalRegistryL110.dll" ComponentId="{FA36B781-2D90-41A9-B7E5-FDE951060022}" Directory_="libs_Dir" Attributes="0" KeyPath="APIMSWinCoreLocalRegistryL110.dll"/>
     <ROW Component="APIMSWinCoreLocalRegistryL110.dll_1" ComponentId="{8D5C9AC1-7128-4647-8C65-E43D23B5F15C}" Directory_="libs_2_Dir" Attributes="0" KeyPath="APIMSWinCoreLocalRegistryL110.dll_1"/>
@@ -433,7 +442,7 @@
     <ROW Component="QuickLaunch" ComponentId="{3EC007BD-F218-4830-A937-0F94867B4950}" Directory_="QuickLaunch_Dir" Attributes="0"/>
     <ROW Component="RDTApis.dll" ComponentId="{0296FDED-66D1-40A3-B9B5-C3A0ED731C15}" Directory_="modules_Dir" Attributes="0" KeyPath="RDTApis.dll"/>
     <ROW Component="RealWoWDLL.dll" ComponentId="{2CE02938-98CF-4489-B9CD-EB8AF0B7749D}" Directory_="modules_Dir" Attributes="0" KeyPath="RealWoWDLL.dll"/>
-    <ROW Component="SHORTCUTDIR" ComponentId="{892D8434-D62B-4735-9BFE-CA433EDEABE6}" Directory_="SHORTCUTDIR" Attributes="0"/>
+    <ROW Component="SHORTCUTDIR" ComponentId="{7775AC58-66EA-4A9E-8894-D2C62B23CFA3}" Directory_="SHORTCUTDIR" Attributes="0"/>
     <ROW Component="SetupOrbweb.ME.exe" ComponentId="{12BE12E8-2F5D-4987-94D8-FD8599423F40}" Directory_="prepare_Dir" Attributes="0" KeyPath="SetupOrbweb.ME.exe"/>
     <ROW Component="__init__.pyo" ComponentId="{E2B97AD2-667E-4514-983A-BB8D794FCACF}" Directory_="concurrent_Dir" Attributes="0" KeyPath="__init__.pyo_6" Type="0"/>
     <ROW Component="__init__.pyo_1" ComponentId="{1CA8FF99-5263-4E98-8763-6A23C8296482}" Directory_="zoneinfo_Dir" Attributes="0" KeyPath="__init__.pyo_9" Type="0"/>
@@ -703,7 +712,7 @@
     <ROW Component="wow_r.exe" ComponentId="{4D7957CD-90D4-4615-AABB-4027BB76E81D}" Directory_="modules_Dir" Attributes="0" KeyPath="wow_r.exe"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
-    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0" Components="AI_CustomARPName AI_ExePath APIMSWinCoreLocalRegistryL110.dll APIMSWinCoreLocalRegistryL110.dll_1 AVICAP32.dll AVICAP32.dll_1 AVIFIL32.dll AVIFIL32.dll_1 CORE_RL_Magick_.dll CORE_RL_bzlib_.dll CORE_RL_glib_.dll CORE_RL_jbig_.dll CORE_RL_jp2_.dll CORE_RL_jpeg_.dll CORE_RL_lcms_.dll CORE_RL_librsvg_.dll CORE_RL_libxml_.dll CORE_RL_lqr_.dll CORE_RL_magick_.dll CORE_RL_openjpeg_.dll CORE_RL_pango_.dll CORE_RL_png_.dll CORE_RL_tiff_.dll CORE_RL_ttf_.dll CORE_RL_wand_.dll CORE_RL_webp_.dll CORE_RL_zlib_.dll ElementPath.pyo ElementPath.pyo_1 HEAD HEAD_1 HEAD_2 IM_MOD_RL_aai_.dll IM_MOD_RL_art_.dll IM_MOD_RL_avs_.dll IM_MOD_RL_bgr_.dll IM_MOD_RL_bmp_.dll IM_MOD_RL_braille_.dll IM_MOD_RL_cals_.dll IM_MOD_RL_caption_.dll IM_MOD_RL_cin_.dll IM_MOD_RL_cip_.dll IM_MOD_RL_clip_.dll IM_MOD_RL_clipboard_.dll IM_MOD_RL_cmyk_.dll IM_MOD_RL_cut_.dll IM_MOD_RL_dcm_.dll IM_MOD_RL_dds_.dll IM_MOD_RL_debug_.dll IM_MOD_RL_dib_.dll IM_MOD_RL_djvu_.dll IM_MOD_RL_dng_.dll IM_MOD_RL_dot_.dll IM_MOD_RL_dps_.dll IM_MOD_RL_dpx_.dll IM_MOD_RL_emf_.dll IM_MOD_RL_ept_.dll IM_MOD_RL_exr_.dll IM_MOD_RL_fax_.dll IM_MOD_RL_fd_.dll IM_MOD_RL_fits_.dll IM_MOD_RL_fpx_.dll IM_MOD_RL_gif_.dll IM_MOD_RL_gradient_.dll IM_MOD_RL_gray_.dll IM_MOD_RL_hald_.dll IM_MOD_RL_hdr_.dll IM_MOD_RL_histogram_.dll IM_MOD_RL_hrz_.dll IM_MOD_RL_html_.dll IM_MOD_RL_icon_.dll IM_MOD_RL_info_.dll IM_MOD_RL_inline_.dll IM_MOD_RL_ipl_.dll IM_MOD_RL_jbig_.dll IM_MOD_RL_jnx_.dll IM_MOD_RL_jp2_.dll IM_MOD_RL_jpeg_.dll IM_MOD_RL_json_.dll IM_MOD_RL_label_.dll IM_MOD_RL_mac_.dll IM_MOD_RL_magick_.dll IM_MOD_RL_map_.dll IM_MOD_RL_mask_.dll IM_MOD_RL_mat_.dll IM_MOD_RL_matte_.dll IM_MOD_RL_meta_.dll IM_MOD_RL_miff_.dll IM_MOD_RL_mono_.dll IM_MOD_RL_mpc_.dll IM_MOD_RL_mpeg_.dll IM_MOD_RL_mpr_.dll IM_MOD_RL_msl_.dll IM_MOD_RL_mtv_.dll IM_MOD_RL_mvg_.dll IM_MOD_RL_null_.dll IM_MOD_RL_otb_.dll IM_MOD_RL_palm_.dll IM_MOD_RL_pango_.dll IM_MOD_RL_pattern_.dll IM_MOD_RL_pcd_.dll IM_MOD_RL_pcl_.dll IM_MOD_RL_pcx_.dll IM_MOD_RL_pdb_.dll IM_MOD_RL_pdf_.dll IM_MOD_RL_pes_.dll IM_MOD_RL_pict_.dll IM_MOD_RL_pix_.dll IM_MOD_RL_plasma_.dll IM_MOD_RL_png_.dll IM_MOD_RL_pnm_.dll IM_MOD_RL_preview_.dll IM_MOD_RL_ps2_.dll IM_MOD_RL_ps3_.dll IM_MOD_RL_ps_.dll IM_MOD_RL_psd_.dll IM_MOD_RL_pwp_.dll IM_MOD_RL_raw_.dll IM_MOD_RL_rgb_.dll IM_MOD_RL_rgf_.dll IM_MOD_RL_rla_.dll IM_MOD_RL_rle_.dll IM_MOD_RL_scr_.dll IM_MOD_RL_screenshot_.dll IM_MOD_RL_sct_.dll IM_MOD_RL_sfw_.dll IM_MOD_RL_sgi_.dll IM_MOD_RL_stegano_.dll IM_MOD_RL_sun_.dll IM_MOD_RL_svg_.dll IM_MOD_RL_tga_.dll IM_MOD_RL_thumbnail_.dll IM_MOD_RL_tiff_.dll IM_MOD_RL_tile_.dll IM_MOD_RL_tim_.dll IM_MOD_RL_ttf_.dll IM_MOD_RL_txt_.dll IM_MOD_RL_uil_.dll IM_MOD_RL_url_.dll IM_MOD_RL_uyvy_.dll IM_MOD_RL_vicar_.dll IM_MOD_RL_vid_.dll IM_MOD_RL_viff_.dll IM_MOD_RL_vips_.dll IM_MOD_RL_wbmp_.dll IM_MOD_RL_webp_.dll IM_MOD_RL_wmf_.dll IM_MOD_RL_wpg_.dll IM_MOD_RL_xbm_.dll IM_MOD_RL_xc_.dll IM_MOD_RL_xcf_.dll IM_MOD_RL_xpm_.dll IM_MOD_RL_xps_.dll IM_MOD_RL_xtrn_.dll IM_MOD_RL_ycbcr_.dll IM_MOD_RL_yuv_.dll IOTCAPIs.dll InputSimulator.dll KillerLANPatcher.exe License.txt LicenseBabel.txt MPR.dll MPR.dll_1 MSACM32.dll MSACM32.dll_1 MSVFW32.dll MSVFW32.dll_1 P2PTunnelAPIs.dll P2PTunnelServer.exe PmePowerOn.exe ProductInformation QuickLaunch RDTApis.dll RealWoWDLL.dll SHORTCUTDIR SetupOrbweb.ME.exe __init__.pyo __init__.pyo_1 __init__.pyo_10 __init__.pyo_11 __init__.pyo_12 __init__.pyo_13 __init__.pyo_14 __init__.pyo_15 __init__.pyo_16 __init__.pyo_17 __init__.pyo_18 __init__.pyo_19 __init__.pyo_2 __init__.pyo_3 __init__.pyo_4 __init__.pyo_5 __init__.pyo_6 __init__.pyo_7 __init__.pyo_8 __init__.pyo_9 _compat.pyo _compat.pyo_1 _implementation.pyo _implementation.pyo_1 abc.pyo abc.pyo_1 adapters.pyo adapters.pyo_1 add_newdocs.pyo add_newdocs.pyo_1 aliases.pyo aliases.pyo_1 analyze.dll ansi.pyo ansi.pyo_1 app.pyo app.pyo_1 applypatchmsg.sample archive_util.pyo archive_util.pyo_1 arraypad.pyo arraypad.pyo_1 arrayprint.pyo arrayprint.pyo_1 ast.pyo ast.pyo_1 athr_swoi.dll autodist.pyo autodist.pyo_1 auxfuncs.pyo auxfuncs.pyo_1 base.pyo base.pyo_1 base.pyo_2 base.pyo_3 base.pyo_4 base.pyo_5 base64mime.pyo base64mime.pyo_1 basemode.pyo basemode.pyo_1 bccache.pyo bccache.pyo_1 bdist_rpm.pyo bdist_rpm.pyo_1 big5freq.pyo big5freq.pyo_1 big5freq.pyo_2 big5freq.pyo_3 cacert.pem case.pyo case.pyo_1 case.pyo_2 case.pyo_3 ccompiler.pyo ccompiler.pyo_1 cconsole7.exe cconsole8.exe chebyshev.pyo chebyshev.pyo_1 common.pyo common.pyo_1 compat.pyo compat.pyo_1 compat.pyo_2 compat.pyo_3 conf_permissions.exe conf_permissions.exe_1 config config.pyo config.pyo_1 connection.pyo connection.pyo_1 connection.pyo_2 connection.pyo_3 connection.pyo_4 connection.pyo_5 connection.pyo_6 connection.pyo_7 console.pyo console.pyo_1 core.pyo core.pyo_1 core.pyo_2 core.pyo_3 core.pyo_4 core.pyo_5 crossdomain.xml crossdomain.xml_1 datastructures.pyo datastructures.pyo_1 debug.pyo debug.pyo_1 decoder.pyo decoder.pyo_1 decoder.pyo_2 decoder.pyo_3 decoder.pyo_4 decoder.pyo_5 decoder.pyo_6 decoder.pyo_7 decorators.pyo decorators.pyo_1 decorators.pyo_2 decorators.pyo_3 defaults.pyo defaults.pyo_1 defmatrix.pyo defmatrix.pyo_1 devices.pyo devices.pyo_1 dist.nsh dtcompat.pyo dtcompat.pyo_1 dyld.pyo dyld.pyo_1 easter.pyo easter.pyo_1 error.pyo error.pyo_1 exclude expat.pyo expat.pyo_1 favicon.ico ffmpeg.exe ffmpeg.exe_1 ffmpeg.pyo ffmpeg.pyo_1 ffprobe.exe ffprobe.exe_1 fftpack.pyo fftpack.pyo_1 fixers.pyo fixers.pyo_1 fw_app_rule.exe fw_app_rule.exe_1 geo2nginx.pl geo2nginx.pl_1 gitignore gitignore_1 gitignore_2 gitignore_3 gitignore_4 header.bmp history.pyo history.pyo_1 info.pyo info.pyo_1 info.pyo_2 info.pyo_3 ironpython_clipboard.pyo ironpython_clipboard.pyo_1 kloudian.ico koiutf koiutf_1 koiutf_2 koiutf_3 ks7.exe ks8.exe libiomp5md.dll libiomp5md.dll_1 master master_1 mime.types mime.types_1 msvcr100.dll nginx.exe nginx.exe_1 nontrivial.pyo nontrivial.pyo_1 octets.pyo octets.pyo_1 opencv.pyo opencv.pyo_1 opencv_calib3d249.dll opencv_calib3d249.dll_1 opencv_contrib249.dll opencv_contrib249.dll_1 opencv_core249.dll opencv_core249.dll_1 opencv_features2d249.dll opencv_features2d249.dll_1 opencv_flann249.dll opencv_flann249.dll_1 opencv_highgui249.dll opencv_highgui249.dll_1 opencv_imgproc249.dll opencv_imgproc249.dll_1 opencv_legacy249.dll opencv_legacy249.dll_1 opencv_ml249.dll opencv_ml249.dll_1 opencv_nonfree249.dll opencv_nonfree249.dll_1 opencv_objdetect249.dll opencv_objdetect249.dll_1 opencv_ocl249.dll opencv_ocl249.dll_1 opencv_photo249.dll opencv_photo249.dll_1 opencv_video249.dll opencv_video249.dll_1 ordered_dict.pyo ordered_dict.pyo_1 packb22b1bcf1d26fd4be2185e7d6e051095b316 process.pyo process.pyo_1 py3k.pyo py3k.pyo_1 pyopenssl.pyo pyopenssl.pyo_1 python27.dll python27.dll_1 pywintypes27.dll pywintypes27.dll_1 realwow60.cat realwow60.cat_1 realwow60.cat_2 realwow60.cat_3 rm7.exe rm8.exe rpd.exe rpd.exe_1 rtkbind.exe rtkbind.exe_1 rtkbind6.exe rtkbind6.exe_1 set_rdp.exe set_rdp.exe_1 signals.pyo signals.pyo_1 skynet.exe tbb.dll tbb.dll_1 util.pyo util.pyo_1 v2.pyo v2.pyo_1 vcomp100.dll version.py w9xpopen.exe w9xpopen.exe_1 webcam.exe wow_a.exe wow_i.exe wow_r.exe"/>
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0" Components="AIShRegAnswer AI_ExePath APIMSWinCoreLocalRegistryL110.dll APIMSWinCoreLocalRegistryL110.dll_1 AVICAP32.dll AVICAP32.dll_1 AVIFIL32.dll AVIFIL32.dll_1 CORE_RL_Magick_.dll CORE_RL_bzlib_.dll CORE_RL_glib_.dll CORE_RL_jbig_.dll CORE_RL_jp2_.dll CORE_RL_jpeg_.dll CORE_RL_lcms_.dll CORE_RL_librsvg_.dll CORE_RL_libxml_.dll CORE_RL_lqr_.dll CORE_RL_magick_.dll CORE_RL_openjpeg_.dll CORE_RL_pango_.dll CORE_RL_png_.dll CORE_RL_tiff_.dll CORE_RL_ttf_.dll CORE_RL_wand_.dll CORE_RL_webp_.dll CORE_RL_zlib_.dll ElementPath.pyo ElementPath.pyo_1 HEAD HEAD_1 HEAD_2 IM_MOD_RL_aai_.dll IM_MOD_RL_art_.dll IM_MOD_RL_avs_.dll IM_MOD_RL_bgr_.dll IM_MOD_RL_bmp_.dll IM_MOD_RL_braille_.dll IM_MOD_RL_cals_.dll IM_MOD_RL_caption_.dll IM_MOD_RL_cin_.dll IM_MOD_RL_cip_.dll IM_MOD_RL_clip_.dll IM_MOD_RL_clipboard_.dll IM_MOD_RL_cmyk_.dll IM_MOD_RL_cut_.dll IM_MOD_RL_dcm_.dll IM_MOD_RL_dds_.dll IM_MOD_RL_debug_.dll IM_MOD_RL_dib_.dll IM_MOD_RL_djvu_.dll IM_MOD_RL_dng_.dll IM_MOD_RL_dot_.dll IM_MOD_RL_dps_.dll IM_MOD_RL_dpx_.dll IM_MOD_RL_emf_.dll IM_MOD_RL_ept_.dll IM_MOD_RL_exr_.dll IM_MOD_RL_fax_.dll IM_MOD_RL_fd_.dll IM_MOD_RL_fits_.dll IM_MOD_RL_fpx_.dll IM_MOD_RL_gif_.dll IM_MOD_RL_gradient_.dll IM_MOD_RL_gray_.dll IM_MOD_RL_hald_.dll IM_MOD_RL_hdr_.dll IM_MOD_RL_histogram_.dll IM_MOD_RL_hrz_.dll IM_MOD_RL_html_.dll IM_MOD_RL_icon_.dll IM_MOD_RL_info_.dll IM_MOD_RL_inline_.dll IM_MOD_RL_ipl_.dll IM_MOD_RL_jbig_.dll IM_MOD_RL_jnx_.dll IM_MOD_RL_jp2_.dll IM_MOD_RL_jpeg_.dll IM_MOD_RL_json_.dll IM_MOD_RL_label_.dll IM_MOD_RL_mac_.dll IM_MOD_RL_magick_.dll IM_MOD_RL_map_.dll IM_MOD_RL_mask_.dll IM_MOD_RL_mat_.dll IM_MOD_RL_matte_.dll IM_MOD_RL_meta_.dll IM_MOD_RL_miff_.dll IM_MOD_RL_mono_.dll IM_MOD_RL_mpc_.dll IM_MOD_RL_mpeg_.dll IM_MOD_RL_mpr_.dll IM_MOD_RL_msl_.dll IM_MOD_RL_mtv_.dll IM_MOD_RL_mvg_.dll IM_MOD_RL_null_.dll IM_MOD_RL_otb_.dll IM_MOD_RL_palm_.dll IM_MOD_RL_pango_.dll IM_MOD_RL_pattern_.dll IM_MOD_RL_pcd_.dll IM_MOD_RL_pcl_.dll IM_MOD_RL_pcx_.dll IM_MOD_RL_pdb_.dll IM_MOD_RL_pdf_.dll IM_MOD_RL_pes_.dll IM_MOD_RL_pict_.dll IM_MOD_RL_pix_.dll IM_MOD_RL_plasma_.dll IM_MOD_RL_png_.dll IM_MOD_RL_pnm_.dll IM_MOD_RL_preview_.dll IM_MOD_RL_ps2_.dll IM_MOD_RL_ps3_.dll IM_MOD_RL_ps_.dll IM_MOD_RL_psd_.dll IM_MOD_RL_pwp_.dll IM_MOD_RL_raw_.dll IM_MOD_RL_rgb_.dll IM_MOD_RL_rgf_.dll IM_MOD_RL_rla_.dll IM_MOD_RL_rle_.dll IM_MOD_RL_scr_.dll IM_MOD_RL_screenshot_.dll IM_MOD_RL_sct_.dll IM_MOD_RL_sfw_.dll IM_MOD_RL_sgi_.dll IM_MOD_RL_stegano_.dll IM_MOD_RL_sun_.dll IM_MOD_RL_svg_.dll IM_MOD_RL_tga_.dll IM_MOD_RL_thumbnail_.dll IM_MOD_RL_tiff_.dll IM_MOD_RL_tile_.dll IM_MOD_RL_tim_.dll IM_MOD_RL_ttf_.dll IM_MOD_RL_txt_.dll IM_MOD_RL_uil_.dll IM_MOD_RL_url_.dll IM_MOD_RL_uyvy_.dll IM_MOD_RL_vicar_.dll IM_MOD_RL_vid_.dll IM_MOD_RL_viff_.dll IM_MOD_RL_vips_.dll IM_MOD_RL_wbmp_.dll IM_MOD_RL_webp_.dll IM_MOD_RL_wmf_.dll IM_MOD_RL_wpg_.dll IM_MOD_RL_xbm_.dll IM_MOD_RL_xc_.dll IM_MOD_RL_xcf_.dll IM_MOD_RL_xpm_.dll IM_MOD_RL_xps_.dll IM_MOD_RL_xtrn_.dll IM_MOD_RL_ycbcr_.dll IM_MOD_RL_yuv_.dll IOTCAPIs.dll InputSimulator.dll KillerLANPatcher.exe License.txt LicenseBabel.txt MPR.dll MPR.dll_1 MSACM32.dll MSACM32.dll_1 MSVFW32.dll MSVFW32.dll_1 P2PTunnelAPIs.dll P2PTunnelServer.exe PmePowerOn.exe ProductInformation QuickLaunch RDTApis.dll RealWoWDLL.dll SHORTCUTDIR SetupOrbweb.ME.exe __init__.pyo __init__.pyo_1 __init__.pyo_10 __init__.pyo_11 __init__.pyo_12 __init__.pyo_13 __init__.pyo_14 __init__.pyo_15 __init__.pyo_16 __init__.pyo_17 __init__.pyo_18 __init__.pyo_19 __init__.pyo_2 __init__.pyo_3 __init__.pyo_4 __init__.pyo_5 __init__.pyo_6 __init__.pyo_7 __init__.pyo_8 __init__.pyo_9 _compat.pyo _compat.pyo_1 _implementation.pyo _implementation.pyo_1 abc.pyo abc.pyo_1 adapters.pyo adapters.pyo_1 add_newdocs.pyo add_newdocs.pyo_1 aliases.pyo aliases.pyo_1 analyze.dll ansi.pyo ansi.pyo_1 app.pyo app.pyo_1 applypatchmsg.sample archive_util.pyo archive_util.pyo_1 arraypad.pyo arraypad.pyo_1 arrayprint.pyo arrayprint.pyo_1 ast.pyo ast.pyo_1 athr_swoi.dll autodist.pyo autodist.pyo_1 auxfuncs.pyo auxfuncs.pyo_1 base.pyo base.pyo_1 base.pyo_2 base.pyo_3 base.pyo_4 base.pyo_5 base64mime.pyo base64mime.pyo_1 basemode.pyo basemode.pyo_1 bccache.pyo bccache.pyo_1 bdist_rpm.pyo bdist_rpm.pyo_1 big5freq.pyo big5freq.pyo_1 big5freq.pyo_2 big5freq.pyo_3 cacert.pem case.pyo case.pyo_1 case.pyo_2 case.pyo_3 ccompiler.pyo ccompiler.pyo_1 cconsole7.exe cconsole8.exe chebyshev.pyo chebyshev.pyo_1 common.pyo common.pyo_1 compat.pyo compat.pyo_1 compat.pyo_2 compat.pyo_3 conf_permissions.exe conf_permissions.exe_1 config config.pyo config.pyo_1 connection.pyo connection.pyo_1 connection.pyo_2 connection.pyo_3 connection.pyo_4 connection.pyo_5 connection.pyo_6 connection.pyo_7 console.pyo console.pyo_1 core.pyo core.pyo_1 core.pyo_2 core.pyo_3 core.pyo_4 core.pyo_5 crossdomain.xml crossdomain.xml_1 datastructures.pyo datastructures.pyo_1 debug.pyo debug.pyo_1 decoder.pyo decoder.pyo_1 decoder.pyo_2 decoder.pyo_3 decoder.pyo_4 decoder.pyo_5 decoder.pyo_6 decoder.pyo_7 decorators.pyo decorators.pyo_1 decorators.pyo_2 decorators.pyo_3 defaults.pyo defaults.pyo_1 defmatrix.pyo defmatrix.pyo_1 devices.pyo devices.pyo_1 dist.nsh dtcompat.pyo dtcompat.pyo_1 dyld.pyo dyld.pyo_1 easter.pyo easter.pyo_1 error.pyo error.pyo_1 exclude expat.pyo expat.pyo_1 favicon.ico ffmpeg.exe ffmpeg.exe_1 ffmpeg.pyo ffmpeg.pyo_1 ffprobe.exe ffprobe.exe_1 fftpack.pyo fftpack.pyo_1 fixers.pyo fixers.pyo_1 fw_app_rule.exe fw_app_rule.exe_1 geo2nginx.pl geo2nginx.pl_1 gitignore gitignore_1 gitignore_2 gitignore_3 gitignore_4 header.bmp history.pyo history.pyo_1 info.pyo info.pyo_1 info.pyo_2 info.pyo_3 ironpython_clipboard.pyo ironpython_clipboard.pyo_1 kloudian.ico koiutf koiutf_1 koiutf_2 koiutf_3 ks7.exe ks8.exe libiomp5md.dll libiomp5md.dll_1 master master_1 mime.types mime.types_1 msvcr100.dll nginx.exe nginx.exe_1 nontrivial.pyo nontrivial.pyo_1 octets.pyo octets.pyo_1 opencv.pyo opencv.pyo_1 opencv_calib3d249.dll opencv_calib3d249.dll_1 opencv_contrib249.dll opencv_contrib249.dll_1 opencv_core249.dll opencv_core249.dll_1 opencv_features2d249.dll opencv_features2d249.dll_1 opencv_flann249.dll opencv_flann249.dll_1 opencv_highgui249.dll opencv_highgui249.dll_1 opencv_imgproc249.dll opencv_imgproc249.dll_1 opencv_legacy249.dll opencv_legacy249.dll_1 opencv_ml249.dll opencv_ml249.dll_1 opencv_nonfree249.dll opencv_nonfree249.dll_1 opencv_objdetect249.dll opencv_objdetect249.dll_1 opencv_ocl249.dll opencv_ocl249.dll_1 opencv_photo249.dll opencv_photo249.dll_1 opencv_video249.dll opencv_video249.dll_1 ordered_dict.pyo ordered_dict.pyo_1 packb22b1bcf1d26fd4be2185e7d6e051095b316 process.pyo process.pyo_1 py3k.pyo py3k.pyo_1 pyopenssl.pyo pyopenssl.pyo_1 python27.dll python27.dll_1 pywintypes27.dll pywintypes27.dll_1 realwow60.cat realwow60.cat_1 realwow60.cat_2 realwow60.cat_3 rm7.exe rm8.exe rpd.exe rpd.exe_1 rtkbind.exe rtkbind.exe_1 rtkbind6.exe rtkbind6.exe_1 set_rdp.exe set_rdp.exe_1 signals.pyo signals.pyo_1 skynet.exe tbb.dll tbb.dll_1 util.pyo util.pyo_1 v2.pyo v2.pyo_1 vcomp100.dll version.py w9xpopen.exe w9xpopen.exe_1 webcam.exe wow_a.exe wow_i.exe wow_r.exe"/>
     <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
@@ -2886,16 +2895,30 @@
     <ROW File="zlib_codec.pyo" Component_="aliases.pyo" FileName="ZLIB_C~1.PYO|zlib_codec.pyo" Attributes="0" SourcePath="..\host-agent\build\libs\encodings\zlib_codec.pyo" SelfReg="false" NextFile="__init__.pyo_15"/>
     <ROW File="zlib_codec.pyo_1" Component_="aliases.pyo_1" FileName="ZLIB_C~1.PYO|zlib_codec.pyo" Attributes="0" SourcePath="..\host-agent\services\skynet\libs\encodings\zlib_codec.pyo" SelfReg="false" NextFile="__init__.pyo_97"/>
   </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.custcomp.MsiShortcutPropertyComponent">
+    <ROW MsiShortcutProperty="_0" Shortcut_="_" PropertyKey="System.AppUserModel.PreventPinning" PropVariantValue="1"/>
+    <ROW MsiShortcutProperty="_1" Shortcut_="_" PropertyKey="[AiPreventAutoPin]" PropVariantValue="1"/>
+    <ROW MsiShortcutProperty="DEF0" Shortcut_="DEF" PropertyKey="System.AppUserModel.PreventPinning" PropVariantValue="1"/>
+    <ROW MsiShortcutProperty="DEF1" Shortcut_="DEF" PropertyKey="[AiPreventAutoPin]" PropVariantValue="1"/>
+  </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
     <ROW BootstrOptKey="GlobalOptions" GeneralOptions="qh" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" EulaPathLocId="*" IntroTextPathLocId="*"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
-    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" PackageFolder="binary_output" Languages="zh_TW" InstallationType="4" CabsLocation="1" PackageType="1" FilesInsideExe="true" ExtractionFolder="[AppDataFolder][|Manufacturer]\[|ProductName] [|ProductVersion]\install" ExtUI="true" UseLargeSchema="true" UACExecutionLevel="2"/>
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" PackageFolder="binary_output" Languages="zh_TW;en;zh;fr;de;ja;ko;ru" LangOpt="1" InstallationType="2" CabsLocation="1" CompressCabs="false" UseLzma="true" LzmaMethod="2" LzmaCompressionLevel="2" PackageType="1" FilesInsideExe="true" ExeIconPath="..\host-agent\dependencies\media\kloudian-package.ico" ExtractionFolder="[AppDataFolder][|Manufacturer]\[|ProductName] [|ProductVersion]\install" ExtUI="true" Options="8" UseLargeSchema="true" UACExecutionLevel="2"/>
     <ATTRIBUTE name="CurrentBuild" value="DefaultBuild"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
     <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
     <ROW Path="&lt;AI_DICTS&gt;ui_zh_TW.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_zh.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_fr.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_de.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_ja.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_ko.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_ru.ail"/>
+    <ATTRIBUTE name="TranslateSegments" value="8116002816"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.DigCertStoreComponent">
     <ROW TimeStampUrl="http://timestamp.verisign.com/scripts/timstamp.dll" SignerDescription="[|ProductName]" SignOptions="0" SignTool="0"/>
@@ -2907,11 +2930,13 @@
     <ROW Fragment="MaintenanceTypeDlg.aip" Path="&lt;AI_THEMES&gt;surface\fragments\MaintenanceTypeDlg.aip"/>
     <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;surface\fragments\SequenceDialogs.aip"/>
     <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="ShortcutsDlg.aip" Path="&lt;AI_THEMES&gt;surface\fragments\ShortcutsDlg.aip"/>
     <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
     <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;surface\fragments\UI.aip"/>
     <ROW Fragment="Validation.aip" Path="&lt;AI_FRAGS&gt;Validation.aip"/>
     <ROW Fragment="VerifyRemoveDlg.aip" Path="&lt;AI_THEMES&gt;surface\fragments\VerifyRemoveDlg.aip"/>
     <ROW Fragment="VerifyRepairDlg.aip" Path="&lt;AI_THEMES&gt;surface\fragments\VerifyRepairDlg.aip"/>
+    <ROW Fragment="WelcomeDlg.aip" Path="&lt;AI_THEMES&gt;surface\fragments\WelcomeDlg.aip"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiActionTextComponent">
     <ROW Action="AI_DeleteLzma" Description="正在移除從檔案中提取的檔案" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
@@ -2922,16 +2947,18 @@
   <COMPONENT cid="caphyon.advinst.msicomp.MsiAppSearchComponent">
     <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_CU" Builds="DefaultBuild"/>
     <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_LM" Builds="DefaultBuild"/>
+    <ROW Property="AI_SHORTCUTSREG" Signature_="AI_ShRegOptionMachine"/>
+    <ROW Property="AI_SHORTCUTSREG" Signature_="AI_ShRegOptionUser"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
     <ROW Name="ExternalUICleaner.dll" SourcePath="&lt;AI_CUSTACTS&gt;ExternalUICleaner.dll"/>
     <ROW Name="Prereq.dll" SourcePath="&lt;AI_CUSTACTS&gt;Prereq.dll"/>
+    <ROW Name="ShortcutFlags.dll" SourcePath="&lt;AI_CUSTACTS&gt;ShortcutFlags.dll"/>
     <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
     <ROW Name="lzmaextractor.dll" SourcePath="&lt;AI_CUSTACTS&gt;lzmaextractor.dll"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiControlComponent">
     <ROW Dialog_="CustomizeDlg" Control="CustomizeDlgDialogInitializer" Type="DialogInitializer" X="0" Y="0" Width="0" Height="0" Attributes="0" Order="-1" TextLocId="-" HelpLocId="-" ExtDataLocId="-"/>
-    <ROW Dialog_="LicenseAgreementDlg" Control="AgreementText" Type="ScrollableText" X="17" Y="106" Width="312" Height="243" Attributes="3" Property="EulaRead" Text="..\host-agent\dependencies\media\LICENCE.rtf" Order="600" TextLocId="Control.Text.LicenseAgreementDlg#AgreementText_2" MsiKey="LicenseAgreementDlg#AgreementText"/>
     <ROW Dialog_="MsiRMFilesInUse" Control="Cancel" Type="ImageButton" X="163" Y="359" Width="78" Height="28" Attributes="2" Text="[NextCancelButtons]" TextStyle="[MetroButtonText]" Order="100" MsiKey="MsiRMFilesInUse#Cancel" Options="1" ExtType="ImageButton" ExtData="[ButtonText_Cancel]" ExtDataLocId="-"/>
     <ROW Dialog_="PatchWelcomeDlg" Control="PatchWelcomeDlgDialogInitializer" Type="DialogInitializer" X="0" Y="0" Width="0" Height="0" Attributes="0" Order="-1" TextLocId="-" HelpLocId="-" ExtDataLocId="-"/>
     <ROW Dialog_="VerifyReadyDlg" Control="Cancel" Type="ImageButton" X="163" Y="359" Width="78" Height="28" Attributes="2" Text="[NextCancelButtons]" TextStyle="[MetroButtonText]" Order="100" MsiKey="VerifyReadyDlg#Cancel" Options="1" ExtType="ImageButton" ExtData="[ButtonText_Cancel]" ExtDataLocId="-"/>
@@ -2946,12 +2973,17 @@
     <ROW Dialog_="VerifyRemoveDlg" Control="Cancel" Type="ImageButton" X="163" Y="359" Width="78" Height="28" Attributes="2" Text="[NextCancelButtons]" TextStyle="[MetroButtonText]" Order="100" MsiKey="VerifyRemoveDlg#Cancel" Options="1" ExtType="ImageButton" ExtData="[ButtonText_Cancel]" ExtDataLocId="-"/>
     <ROW Dialog_="VerifyRepairDlg" Control="Bitmap" Type="Bitmap" X="0" Y="0" Width="345" Height="400" Attributes="1" Text="[Background]" Order="100" MsiKey="VerifyRepairDlg#Bitmap"/>
     <ROW Dialog_="VerifyRepairDlg" Control="Cancel" Type="ImageButton" X="163" Y="359" Width="78" Height="28" Attributes="2" Text="[NextCancelButtons]" TextStyle="[MetroButtonText]" Order="200" MsiKey="VerifyRepairDlg#Cancel" Options="1" ExtType="ImageButton" ExtData="[ButtonText_Cancel]" ExtDataLocId="-"/>
+    <ROW Dialog_="WelcomeDlg" Control="Cancel" Type="ImageButton" X="163" Y="359" Width="78" Height="28" Attributes="2" Text="[NextCancelButtons]" TextStyle="[MetroButtonText]" Order="100" MsiKey="WelcomeDlg#Cancel" Options="1" ExtType="ImageButton" ExtData="[ButtonText_Cancel]" ExtDataLocId="-"/>
+    <ROW Dialog_="WelcomeDlg" Control="Bitmap_1" Type="Bitmap" X="0" Y="0" Width="345" Height="400" Attributes="1" Text="[Background]" Order="200" MsiKey="WelcomeDlg#Bitmap_1"/>
+    <ROW Dialog_="WelcomeDlg" Control="Next" Type="ImageButton" X="251" Y="359" Width="78" Height="28" Attributes="3" Text="[NextCancelButtons]" TextStyle="[MetroButtonText]" Order="300" MsiKey="WelcomeDlg#Next" Options="1" ExtType="ImageButton" ExtData="[ButtonText_Next]" ExtDataLocId="-"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
-    <ROW Dialog_="InstallDlg" Control_="Next" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="301"/>
+    <ROW Dialog_="InstallDlg" Control_="Next" Event="NewDialog" Argument="ShortcutsDlg" Condition="AI_INSTALL" Ordering="301"/>
     <ROW Dialog_="InstallDlg" Control_="YouMustAgreeCtrl" Event="NewDialog" Argument="LicenseAgreementDlg" Condition="AI_INSTALL AND AiLicenseAgreement" Ordering="201"/>
     <ROW Dialog_="LicenseAgreementDlg" Control_="Back" Event="NewDialog" Argument="InstallDlg" Condition="AI_INSTALL AND AiLicenseAgreement" Ordering="1"/>
-    <ROW Dialog_="LicenseAgreementDlg" Control_="Next" Event="EndDialog" Argument="Return" Condition="AI_INSTALL AND AiLicenseAgreement" Ordering="101"/>
+    <ROW Dialog_="LicenseAgreementDlg" Control_="Next" Event="NewDialog" Argument="ShortcutsDlg" Condition="AI_INSTALL AND AiLicenseAgreement" Ordering="101"/>
+    <ROW Dialog_="ShortcutsDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="ShortcutsDlg" Control_="Back" Event="NewDialog" Argument="InstallDlg" Condition="AI_INSTALL" Ordering="1"/>
     <ROW Dialog_="MaintenanceTypeDlg" Control_="ChangeButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="501"/>
     <ROW Dialog_="MaintenanceTypeDlg" Control_="RemoveButton" Event="NewDialog" Argument="VerifyRemoveDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="699"/>
     <ROW Dialog_="VerifyRemoveDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="1"/>
@@ -2963,26 +2995,6 @@
     <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
     <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="201"/>
     <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="99"/>
-    <ROW Dialog_="LicenseAgreementDlg" Control_="Next" Event="SpawnDialog" Argument="OutOfRbDiskDlg" Condition="AI_INSTALL AND AiLicenseAgreement AND OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 0 AND (PROMPTROLLBACKCOST=&quot;P&quot; OR NOT PROMPTROLLBACKCOST)" Ordering="102" Options="2"/>
-    <ROW Dialog_="LicenseAgreementDlg" Control_="Next" Event="EnableRollback" Argument="False" Condition="AI_INSTALL AND AiLicenseAgreement AND OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 0 AND PROMPTROLLBACKCOST=&quot;D&quot;" Ordering="103" Options="2"/>
-    <ROW Dialog_="LicenseAgreementDlg" Control_="Next" Event="SpawnDialog" Argument="OutOfDiskDlg" Condition="AI_INSTALL AND AiLicenseAgreement AND ( (OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 1) OR (OutOfDiskSpace = 1 AND PROMPTROLLBACKCOST=&quot;F&quot;) )" Ordering="104" Options="2"/>
-    <ROW Dialog_="LicenseAgreementDlg" Control_="LicenseAgreementDlgDialogInitializer" Event="[AI_ButtonText_Next_Orig]" Argument="[ButtonText_Next]" Condition="AI_INSTALL AND AiLicenseAgreement" Ordering="101" Options="2"/>
-    <ROW Dialog_="LicenseAgreementDlg" Control_="LicenseAgreementDlgDialogInitializer" Event="[ButtonText_Next]" Argument="[[AI_CommitButton]]" Condition="AI_INSTALL AND AiLicenseAgreement" Ordering="102" Options="2"/>
-    <ROW Dialog_="LicenseAgreementDlg" Control_="LicenseAgreementDlgDialogInitializer" Event="[AI_Text_Next_Orig]" Argument="[Text_Next]" Condition="AI_INSTALL AND AiLicenseAgreement" Ordering="103" Options="2"/>
-    <ROW Dialog_="LicenseAgreementDlg" Control_="LicenseAgreementDlgDialogInitializer" Event="[Text_Next]" Argument="[Text_Install]" Condition="AI_INSTALL AND AiLicenseAgreement" Ordering="104" Options="2"/>
-    <ROW Dialog_="LicenseAgreementDlg" Control_="Back" Event="[ButtonText_Next]" Argument="[AI_ButtonText_Next_Orig]" Condition="AI_INSTALL AND AiLicenseAgreement" Ordering="2" Options="2"/>
-    <ROW Dialog_="LicenseAgreementDlg" Control_="Back" Event="[Text_Next]" Argument="[AI_Text_Next_Orig]" Condition="AI_INSTALL AND AiLicenseAgreement" Ordering="3" Options="2"/>
-    <ROW Dialog_="InstallDlg" Control_="Next" Event="SpawnDialog" Argument="OutOfRbDiskDlg" Condition="AI_INSTALL AND OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 0 AND (PROMPTROLLBACKCOST=&quot;P&quot; OR NOT PROMPTROLLBACKCOST)" Ordering="302" Options="2"/>
-    <ROW Dialog_="InstallDlg" Control_="Next" Event="EnableRollback" Argument="False" Condition="AI_INSTALL AND OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 0 AND PROMPTROLLBACKCOST=&quot;D&quot;" Ordering="303" Options="2"/>
-    <ROW Dialog_="InstallDlg" Control_="Next" Event="SpawnDialog" Argument="OutOfDiskDlg" Condition="AI_INSTALL AND ( (OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 1) OR (OutOfDiskSpace = 1 AND PROMPTROLLBACKCOST=&quot;F&quot;) )" Ordering="304" Options="2"/>
-    <ROW Dialog_="InstallDlg" Control_="InstallDlgDialogInitializer" Event="[AI_ButtonText_Next_Orig]" Argument="[ButtonText_Next]" Condition="AI_INSTALL" Ordering="101" Options="2"/>
-    <ROW Dialog_="InstallDlg" Control_="InstallDlgDialogInitializer" Event="[ButtonText_Next]" Argument="[[AI_CommitButton]]" Condition="AI_INSTALL" Ordering="102" Options="2"/>
-    <ROW Dialog_="InstallDlg" Control_="InstallDlgDialogInitializer" Event="[AI_Text_Next_Orig]" Argument="[Text_Next]" Condition="AI_INSTALL" Ordering="103" Options="2"/>
-    <ROW Dialog_="InstallDlg" Control_="InstallDlgDialogInitializer" Event="[Text_Next]" Argument="[Text_Install]" Condition="AI_INSTALL" Ordering="104" Options="2"/>
-    <ROW Dialog_="InstallDlg" Control_="YouMustAgreeCtrl" Event="[ButtonText_Next]" Argument="[AI_ButtonText_Next_Orig]" Condition="AI_INSTALL" Ordering="202" Options="2"/>
-    <ROW Dialog_="InstallDlg" Control_="YouMustAgreeCtrl" Event="[Text_Next]" Argument="[AI_Text_Next_Orig]" Condition="AI_INSTALL" Ordering="203" Options="2"/>
-    <ROW Dialog_="InstallDlg" Control_="Back" Event="[ButtonText_Next]" Argument="[AI_ButtonText_Next_Orig]" Condition="AI_INSTALL" Ordering="0" Options="2"/>
-    <ROW Dialog_="InstallDlg" Control_="Back" Event="[Text_Next]" Argument="[AI_Text_Next_Orig]" Condition="AI_INSTALL" Ordering="1" Options="2"/>
     <ROW Dialog_="CustomizeDlg" Control_="Modify" Event="SpawnDialog" Argument="OutOfRbDiskDlg" Condition="AI_MAINT AND OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 0 AND (PROMPTROLLBACKCOST=&quot;P&quot; OR NOT PROMPTROLLBACKCOST)" Ordering="102" Options="2"/>
     <ROW Dialog_="CustomizeDlg" Control_="Modify" Event="EnableRollback" Argument="False" Condition="AI_MAINT AND OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 0 AND PROMPTROLLBACKCOST=&quot;D&quot;" Ordering="103" Options="2"/>
     <ROW Dialog_="CustomizeDlg" Control_="Modify" Event="SpawnDialog" Argument="OutOfDiskDlg" Condition="AI_MAINT AND ( (OutOfDiskSpace = 1 AND OutOfNoRbDiskSpace = 1) OR (OutOfDiskSpace = 1 AND PROMPTROLLBACKCOST=&quot;F&quot;) )" Ordering="104" Options="2"/>
@@ -3001,15 +3013,24 @@
     <ROW Dialog_="PatchWelcomeDlg" Control_="PatchWelcomeDlgDialogInitializer" Event="[Text_Next]" Argument="[Text_Install]" Condition="AI_PATCH" Ordering="3" Options="2"/>
     <ROW Dialog_="PatchWelcomeDlg" Control_="Back" Event="[ButtonText_Next]" Argument="[AI_ButtonText_Next_Orig]" Condition="AI_PATCH" Ordering="0" Options="2"/>
     <ROW Dialog_="PatchWelcomeDlg" Control_="Back" Event="[Text_Next]" Argument="[AI_Text_Next_Orig]" Condition="AI_PATCH" Ordering="1" Options="2"/>
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="InstallDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="InstallDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="InstallButton" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="199"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="ShortcutsDlg" Condition="AI_INSTALL" Ordering="101"/>
+    <ROW Dialog_="ShortcutsDlg" Control_="Back" Event="NewDialog" Argument="LicenseAgreementDlg" Condition="AI_INSTALL AND AiLicenseAgreement" Ordering="2"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
-    <ROW Directory_="SHORTCUTDIR" Component_="SHORTCUTDIR" ManualDelete="false"/>
     <ROW Directory_="QuickLaunch_Dir" Component_="QuickLaunch" ManualDelete="false"/>
+    <ROW Directory_="SHORTCUTDIR" Component_="SHORTCUTDIR" ManualDelete="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_ApplyShortcutFlags" Type="3073" Source="ShortcutFlags.dll" Target="UpdateShortcutFlags" WithoutSeq="true"/>
     <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Type="51" Source="AI_SETUPEXEPATH_ORIGINAL" Target="[AI_SETUPEXEPATH]"/>
     <ROW Action="AI_ChooseTextStyles" Type="1" Source="aicustact.dll" Target="ChooseTextStyles"/>
     <ROW Action="AI_DATA_SETTER" Type="51" Source="AI_ExtractFiles" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DATA_SETTER_1" Type="51" Source="AI_DEL_EMPTY_SHORTCUTDIR" Target="[SHORTCUTDIR]"/>
+    <ROW Action="AI_DELETE_SHORTCUTS" Type="1" Source="aicustact.dll" Target="DeleteShortcuts"/>
+    <ROW Action="AI_DEL_EMPTY_SHORTCUTDIR" Type="3073" Source="aicustact.dll" Target="DeleteEmptyDirectory" AdditionalSeq="AI_DATA_SETTER_1"/>
     <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
     <ROW Action="AI_DeleteCadLzma" Type="51" Source="AI_DeleteLzma" Target="[AI_SETUPEXEPATH]"/>
     <ROW Action="AI_DeleteLzma" Type="1025" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
@@ -3022,15 +3043,16 @@
     <ROW Action="AI_ExtractFiles" Type="1025" Source="Prereq.dll" Target="ExtractSourceFiles" AdditionalSeq="AI_DATA_SETTER"/>
     <ROW Action="AI_ExtractLzma" Type="1025" Source="lzmaextractor.dll" Target="ExtractLZMAFiles"/>
     <ROW Action="AI_FindExeLzma" Type="1" Source="lzmaextractor.dll" Target="FindEXE"/>
-    <ROW Action="AI_GetArpIconPath" Type="1" Source="aicustact.dll" Target="GetArpIconPath"/>
     <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
     <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_PrepareShortcutFlags" Type="1" Source="ShortcutFlags.dll" Target="PrepareActionData"/>
     <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Type="51" Source="AI_SETUPEXEPATH" Target="[AI_SETUPEXEPATH_ORIGINAL]"/>
     <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
     <ROW Action="AI_RemoveExternalUIStub" Type="1" Source="ExternalUICleaner.dll" Target="RemoveExternalUIStub"/>
     <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
     <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
     <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="AI_SelectAutoPinOption" Type="51" Source="AiPreventAutoPin" Target="System.AppUserModel.StartPinOption"/>
     <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]"/>
     <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
     <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
@@ -3184,7 +3206,7 @@
     <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
     <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1502"/>
     <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
-    <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="51"/>
     <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Sequence="99" Builds="DefaultBuild"/>
     <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Condition="AI_SETUPEXEPATH_ORIGINAL" Sequence="101" Builds="DefaultBuild"/>
     <ROW Action="AI_DeleteCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="199" Builds="DefaultBuild"/>
@@ -3198,8 +3220,12 @@
     <ROW Action="AI_DATA_SETTER" Sequence="3997"/>
     <ROW Action="AI_EstimateExtractFiles" Sequence="3999" Builds="DefaultBuild"/>
     <ROW Action="ffmpeg.exe" Condition="( NOT Installed )" Sequence="5969"/>
-    <ROW Action="AI_GetArpIconPath" Sequence="51"/>
     <ROW Action="AI_RemoveExternalUIStub" Condition="(REMOVE=&quot;ALL&quot;) AND ((VersionNT &gt; 500) OR((VersionNT = 500) AND (ServicePackLevel &gt;= 4)))" Sequence="1501"/>
+    <ROW Action="AI_DELETE_SHORTCUTS" Condition="NOT (REMOVE=&quot;ALL&quot;)" Sequence="1402"/>
+    <ROW Action="AI_DEL_EMPTY_SHORTCUTDIR" Condition="NOT (REMOVE=&quot;ALL&quot;)" Sequence="6402"/>
+    <ROW Action="AI_DATA_SETTER_1" Condition="NOT (REMOVE=&quot;ALL&quot;)" Sequence="6401"/>
+    <ROW Action="AI_SelectAutoPinOption" Condition="VersionNT &gt; 601" Sequence="1401"/>
+    <ROW Action="AI_PrepareShortcutFlags" Condition="(VersionNT &gt; 501) AND ((NOT Installed) OR (Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;)))" Sequence="4501"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
     <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
@@ -3207,11 +3233,13 @@
     <ROW Action="AI_DpiContentScale" Sequence="51"/>
     <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Sequence="99"/>
     <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Condition="AI_SETUPEXEPATH_ORIGINAL" Sequence="101"/>
-    <ROW Action="InstallDlg" Condition="AI_INSTALL" Sequence="1230" SeqType="3" MsiKey="WelcomeDlg"/>
+    <ROW Action="WelcomeDlg" Condition="AI_INSTALL" Sequence="1230" SeqType="3" MsiKey="WelcomeDlg"/>
     <ROW Action="MaintenanceTypeDlg" Condition="AI_MAINT" Sequence="1250" SeqType="3" MsiKey="MaintenanceTypeDlg"/>
     <ROW Action="AI_ChooseTextStyles" Sequence="74"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="( Version9X OR ( NOT VersionNT64 ) OR ( VersionNT64 AND ((VersionNT64 &lt;&gt; 502) OR (((VersionNT64 = 502) AND (ServicePackLevel &gt;= 1)) OR (MsiNTProductType &lt;&gt; 1))) AND ((VersionNT64 &lt;&gt; 502) OR (((VersionNT64 = 502) AND (ServicePackLevel &lt;&gt; 1)) OR (MsiNTProductType &lt;&gt; 1))) AND ((VersionNT64 &lt;&gt; 502) OR (((VersionNT64 = 502) AND (ServicePackLevel &lt;&gt; 2)) OR (MsiNTProductType &lt;&gt; 1))) AND ((VersionNT64 &lt;&gt; 600) OR (((VersionNT64 = 600) AND (ServicePackLevel &gt;= 1)) OR (MsiNTProductType &lt;&gt; 1))) AND ((VersionNT64 &lt;&gt; 600) OR (((VersionNT64 = 600) AND (ServicePackLevel &lt;&gt; 1)) OR (MsiNTProductType &lt;&gt; 1))) AND ((VersionNT64 &lt;&gt; 600) OR (((VersionNT64 = 600) AND (ServicePackLevel &lt;&gt; 2)) OR (MsiNTProductType &lt;&gt; 1))) AND ((VersionNT64 &lt;&gt; 600) OR ((VersionNT64 = 600) AND (MsiNTProductType = 1))) AND ((VersionNT64 &lt;&gt; 601) OR ((VersionNT64 = 601) AND ((ServicePackLevel &gt;= 1) OR (MsiNTProductType = 1)))) AND ((VersionNT64 &lt;&gt; 601) OR (((VersionNT64 = 601) AND (ServicePackLevel &lt;&gt; 1)) OR (MsiNTProductType = 1))) AND ((VersionNT64 &lt;&gt; 602) OR ((VersionNT64 = 602) AND ((ServicePackLevel &gt;= 1) OR (MsiNTProductType = 1)))) AND ((VersionNT64 &lt;&gt; 603) OR ((VersionNT64 = 603) AND ((ServicePackLevel &gt;= 1) OR (MsiNTProductType = 1)))) ) )" Description="[ProductName] cannot be installed on the following Windows versions: [WindowsTypeNT64Display]" DescriptionLocId="AI.LaunchCondition.NoSpecificNT64" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="( Version9X OR VersionNT64 OR ( VersionNT AND ((VersionNT &lt;&gt; 500) OR ((VersionNT = 500) AND (ServicePackLevel &gt;= 1))) AND ((VersionNT &lt;&gt; 500) OR ((VersionNT = 500) AND (ServicePackLevel &lt;&gt; 1))) AND ((VersionNT &lt;&gt; 500) OR ((VersionNT = 500) AND (ServicePackLevel &lt;&gt; 2))) AND ((VersionNT &lt;&gt; 500) OR ((VersionNT = 500) AND (ServicePackLevel &lt;&gt; 3))) AND ((VersionNT &lt;&gt; 500) OR ((VersionNT = 500) AND (ServicePackLevel &lt;&gt; 4))) AND (((VersionNT &lt;&gt; 501) OR ((VersionNT = 501) AND (ServicePackLevel &gt;= 1))) OR VersionNT64) AND (((VersionNT &lt;&gt; 501) OR ((VersionNT = 501) AND (ServicePackLevel &lt;&gt; 1))) OR VersionNT64) AND (((VersionNT &lt;&gt; 501) OR ((VersionNT = 501) AND (ServicePackLevel &lt;&gt; 2))) OR VersionNT64) AND (((VersionNT &lt;&gt; 501) OR ((VersionNT = 501) AND (ServicePackLevel &lt;&gt; 3))) OR VersionNT64) AND (((VersionNT &lt;&gt; 502) OR ((VersionNT = 502) AND (ServicePackLevel &gt;= 1))) OR VersionNT64) AND (((VersionNT &lt;&gt; 502) OR ((VersionNT = 502) AND (ServicePackLevel &lt;&gt; 1))) OR VersionNT64) AND (((VersionNT &lt;&gt; 502) OR ((VersionNT = 502) AND (ServicePackLevel &lt;&gt; 2))) OR VersionNT64) AND (((VersionNT &lt;&gt; 600) OR (((VersionNT = 600) AND (ServicePackLevel &gt;= 1)) OR (MsiNTProductType &lt;&gt; 1))) OR VersionNT64) AND (((VersionNT &lt;&gt; 600) OR (((VersionNT = 600) AND (ServicePackLevel &lt;&gt; 1)) OR (MsiNTProductType &lt;&gt; 1))) OR VersionNT64) AND (((VersionNT &lt;&gt; 600) OR (((VersionNT = 600) AND (ServicePackLevel &lt;&gt; 2)) OR (MsiNTProductType &lt;&gt; 1))) OR VersionNT64) AND (((VersionNT &lt;&gt; 600) OR ((VersionNT = 600) AND ((MsiNTProductType = 1) OR ((WindowsBuild &lt;&gt; 6001) AND (WindowsBuild &lt;&gt; 6002))))) OR VersionNT64) ) )" Description="[ProductName] cannot be installed on the following Windows versions: [WindowsTypeNTDisplay]" DescriptionLocId="AI.LaunchCondition.NoSpecificNT" IsPredefined="true" Builds="DefaultBuild"/>
     <ROW Condition="(VersionNT &lt;&gt; 400)" Description="[ProductName] cannot be installed on the following Windows versions: [WindowsTypeNT40Display]" DescriptionLocId="AI.LaunchCondition.NoNT40" IsPredefined="true" Builds="DefaultBuild"/>
     <ROW Condition="SETUPEXEDIR" Description="This package can only be run from a bootstrapper." DescriptionLocId="AI.LaunchCondition.RequireBootstrapper" IsPredefined="true" Builds="DefaultBuild"/>
     <ROW Condition="VersionNT" Description="[ProductName] cannot be installed on [WindowsType9XDisplay]" DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="DefaultBuild"/>
@@ -3219,35 +3247,20 @@
   <COMPONENT cid="caphyon.advinst.msicomp.MsiRegLocatorComponent">
     <ROW Signature_="AI_EXE_PATH_CU" Root="1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Type="2"/>
     <ROW Signature_="AI_EXE_PATH_LM" Root="2" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Type="2"/>
+    <ROW Signature_="AI_ShRegOptionMachine" Root="2" Key="Software\Caphyon\Advanced Installer\Installs\[ProductCode]" Name="AIShRegAnswer" Type="2"/>
+    <ROW Signature_="AI_ShRegOptionUser" Root="1" Key="Software\Caphyon\Advanced Installer\Installs\[ProductCode]" Name="AIShRegAnswer" Type="2"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="AIShRegAnswer" Root="-1" Key="Software\Caphyon\Advanced Installer\Installs\[ProductCode]" Name="AIShRegAnswer" Value="[AI_SHORTCUTSREG]" Component_="AIShRegAnswer"/>
     <ROW Registry="AI_ExePath" Root="-1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Value="[AI_SETUPEXEPATH]" Component_="AI_ExePath"/>
-    <ROW Registry="Comments" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="Comments" Value="[ARPCOMMENTS]" Component_="AI_CustomARPName"/>
-    <ROW Registry="Contact" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="Contact" Value="[ARPCONTACT]" Component_="AI_CustomARPName"/>
-    <ROW Registry="DisplayIcon" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="DisplayIcon" Value="[ARP_ICON_PATH]" Component_="AI_CustomARPName"/>
-    <ROW Registry="DisplayName" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="DisplayName" Value="[AI_PRODUCTNAME_ARP]" Component_="AI_CustomARPName"/>
-    <ROW Registry="DisplayVersion" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="DisplayVersion" Value="[ProductVersion]" Component_="AI_CustomARPName"/>
-    <ROW Registry="HelpLink" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="HelpLink" Value="[ARPHELPLINK]" Component_="AI_CustomARPName"/>
-    <ROW Registry="HelpTelephone" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="HelpTelephone" Value="[ARPHELPTELEPHONE]" Component_="AI_CustomARPName"/>
-    <ROW Registry="InstallLocation" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="InstallLocation" Value="[APPDIR]" Component_="AI_CustomARPName"/>
-    <ROW Registry="ModifyPath" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="ModifyPath" Value="[AI_UNINSTALLER] /I [ProductCode]" Component_="AI_CustomARPName"/>
-    <ROW Registry="NoRepair" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="NoRepair" Value="#1" Component_="AI_CustomARPName"/>
     <ROW Registry="Path" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
-    <ROW Registry="Publisher" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="Publisher" Value="[Manufacturer]" Component_="AI_CustomARPName"/>
-    <ROW Registry="URLInfoAbout" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="URLInfoAbout" Value="[ARPURLINFOABOUT]" Component_="AI_CustomARPName"/>
-    <ROW Registry="URLUpdateInfo" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="URLUpdateInfo" Value="[ARPURLUPDATEINFO]" Component_="AI_CustomARPName"/>
-    <ROW Registry="UninstallPath" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="UninstallPath" Value="[AI_UNINSTALLER] /x [ProductCode]" Component_="AI_CustomARPName"/>
-    <ROW Registry="UninstallString" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="UninstallString" Value="[AI_UNINSTALLER] /x [ProductCode]" Component_="AI_CustomARPName"/>
     <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
-    <ROW Registry="VersionMajor" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="VersionMajor" Value="#1" Component_="AI_CustomARPName"/>
-    <ROW Registry="VersionMinor" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="VersionMinor" Value="#2" Component_="AI_CustomARPName"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
-    <ROW Shortcut="OrbWeb.ME.Version" Directory_="SHORTCUTDIR" Name="ORBWEB~1.VER|OrbWeb.ME.Version" Component_="version.py" Target="[#version.py]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="hostagent_Dir"/>
-    <ROW Shortcut="OrbWeb.ME.Version_1" Directory_="DesktopFolder" Name="ORBWEB~1.VER|OrbWeb.ME.Version" Component_="version.py" Target="[#version.py]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="hostagent_Dir"/>
+    <ROW Shortcut="DEF" Directory_="SHORTCUTDIR" Name="Orbweb.me" Component_="version.py" Target="[#version.py]" Hotkey="0" Icon_="kloudianpackage.exe" IconIndex="0" ShowCmd="1" WkDir="hostagent_Dir" CustomFlags="1"/>
+    <ROW Shortcut="OrbWeb.ME.Version_1" Directory_="DesktopFolder" Name="ORBWEB~1.VER|OrbWeb.ME.Version" Component_="version.py" Target="[#version.py]" Hotkey="0" Icon_="kloudianpackage.exe" IconIndex="0" ShowCmd="1" WkDir="hostagent_Dir"/>
     <ROW Shortcut="OrbWeb.ME.Version_2" Directory_="QuickLaunch_Dir" Name="ORBWEB~1.VER|OrbWeb.ME.Version" Component_="version.py" Target="[#version.py]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="hostagent_Dir"/>
-    <ROW Shortcut="OrbWeb.ME.Version_3" Directory_="StartMenuFolder" Name="ORBWEB~1.VER|OrbWeb.ME.Version" Component_="version.py" Target="[#version.py]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="hostagent_Dir"/>
-    <ROW Shortcut="_" Directory_="SHORTCUTDIR" Name="解除安裝" Component_="AI_ExePath" Target="[SystemFolder]msiexec.exe" Arguments="/x [ProductCode]" Hotkey="0" Icon_="SystemFoldermsiexec.exe" IconIndex="0" ShowCmd="1"/>
+    <ROW Shortcut="_" Directory_="SHORTCUTDIR" Name="解除安裝" Component_="opencv_features2d249.dll" Target="[SystemFolder]msiexec.exe" Arguments="/x [ProductCode]" Hotkey="0" Icon_="SystemFoldermsiexec.exe" IconIndex="0" ShowCmd="1" CustomFlags="1"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
     <ATTRIBUTE name="UsedTheme" value="surface"/>
