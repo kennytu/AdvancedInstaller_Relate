@@ -31,3 +31,5 @@
 * [How do I get the application exit code from a Windows command line](http://stackoverflow.com/questions/334879/how-do-i-get-the-application-exit-code-from-a-windows-command-line)
 	* for windows: **echo %ERRORLEVEL%**
 	* for linux: **echo $?**
+* [EULA translation issue](http://www.advancedinstaller.com/forums/viewtopic.php?f=2&t=19625)
+* [How do I localize the EULA and ReadMe text?](http://www.advancedinstaller.com/user-guide/qa-localize-element.html)
