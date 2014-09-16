@@ -33,3 +33,4 @@
 	* for linux: **echo $?**
 * [EULA translation issue](http://www.advancedinstaller.com/forums/viewtopic.php?f=2&t=19625)
 * [How do I localize the EULA and ReadMe text?](http://www.advancedinstaller.com/user-guide/qa-localize-element.html)
+* [Professional Installation from CLI](http://www.advancedinstaller.com/user-guide/tutorial-professional-cli.html)
