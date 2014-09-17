@@ -22,11 +22,11 @@
 * You need to have the Administrator Owner.
 * Run the executable file and add the postfix "**/qn**, or **/quiet**", for example, to run **orbweb.me.exe /qn**, the windows installer will install this package quietly
 
-##ISSUE
+##ISSUE - User Interface - Theme
 
 When I use the Surfacce of the Themes of the User Interface, the InstallDlg Dialog features that has a file chooser to choose the rtf format file for LICENCE, if I choosed our one file to read and build than, the compiler will encounter the error that is **Failed to read RTF file "C:\xxx\EULA\Control.Text.LicenseAgreementDlg#AgreementText_2". Make sure you localized correctly the path for "Control.Text.LicenseAgreementDlg#AgreementText_2"."**
 
-Fixed method is that go to the **"C:\Program Files (x86)\Caphyon\Advanced Installer 11.4.1\resources"**, and repleace the **eula.rtf** to our licence file, notice that the file name can't changed!
+Solved method is that go to the **"C:\Program Files (x86)\Caphyon\Advanced Installer 11.4.1\resources"**, and repleace the **eula.rtf** to our licence file, notice that the file name can't changed!
 
 ##Reference 
 
