@@ -21,6 +21,7 @@ C:\Program Files\Kloudian\svcad.exe -uninstall yes
 
 C:\Program Files (x86)\Kloudian\svcad.exe -uninstall yes
 
+C:\Program Files (x86)\Kloudian\svcac.exe -uninstall yes (if we need)
 
 netsh advfirewall firewall delete rule name=\"Orbweb HTTP\"
 
