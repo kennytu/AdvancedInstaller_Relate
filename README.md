@@ -28,6 +28,20 @@ In the Advanced Installer Windows, find the **Resources** -> **Services**, and t
 
 `When the UserName left empty, the service will run under the LocalSystem account.`
 
+##User Interface Setup
+
+###Themes
+- Surface 
+
+### Dialogs
+####Bootstrapper UI
+####MSI Package - First Time Install
+* InstallDlg
+* InstallTypeDlg
+* VerifyReadyDlg
+* ProgressDlg
+* ExitDialog
+
 ##ISSUE - User Interface - Theme
 
 When I use the Surfacce of the Themes of the User Interface, the InstallDlg Dialog features that has a file chooser to choose the rtf format file for LICENCE, if I choosed our one file to read and build than, the compiler will encounter the error that is **Failed to read RTF file "C:\xxx\EULA\Control.Text.LicenseAgreementDlg#AgreementText_2". Make sure you localized correctly the path for "Control.Text.LicenseAgreementDlg#AgreementText_2"."**
