@@ -48,6 +48,10 @@ When I use the Surfacce of the Themes of the User Interface, the InstallDlg Dial
 
 Solved method is that go to the **"C:\Program Files (x86)\Caphyon\Advanced Installer 11.4.1\resources"**, and repleace the **eula.rtf** to our licence file, notice that the file name can't changed!
 
+
+## NSIS Silent mode
+Using /S which runs the installer or uninstaller silently
+
 ##Reference 
 
 * [Create a silent installation package](http://www.advancedinstaller.com/user-guide/qa-silent-install.html)
@@ -61,3 +65,4 @@ Solved method is that go to the **"C:\Program Files (x86)\Caphyon\Advanced Insta
 * [Professional Installation from CLI](http://www.advancedinstaller.com/user-guide/tutorial-professional-cli.html)
 * [Windows Installer Advertised Shortcuts](http://www.advancedinstaller.com/user-guide/advertised-shortcuts.html)
 * [Service properties](http://www.advancedinstaller.com/user-guide/service-properties.html)
+* [NSIS Silent Mode](http://nsis.sourceforge.net/Docs/Chapter3.html)
