@@ -43,5 +43,10 @@ netsh advfirewall firewall delete rule name=\"Orbweb Daemon Service\"
 rmdir /s /q C:\"Program Files"\Kloudian
 rmdir /s /q C:\"Program Files (x86)"\Kloudian
 rmdir /s /q C:\ProgramData\Orbweb
+rmdir /S /Q C:\ProgramData\Microsoft\Windows\"Start Menu"\Programs\Kloudian
 
+rem delete OrbwebAdmin
 for /D %%f in (C:\Users\OrbwebAdmin*) do rmdir %%f /S /Q
+
+rem delete kloudian uninstall registy (it will show the program uninstall / change list)
+reg delete HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Orbweb.ME /va /f
