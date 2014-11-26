@@ -12,19 +12,6 @@ taskkill /F /T /IM svcmain.exe
 rem remove services
 
 
-sc stop OU
-sc delete OU
-
-sc stop OD
-sc delete OD
-
-sc stop SVCM
-sc delete SVCM
-
-sc stop OM
-sc delete OM
-
-
 C:\"Program Files"\Kloudian\svcad.exe -uninstall yes
 C:\"Program Files (x86)"\Kloudian\svcad.exe -uninstall yes
 C:\"Program Files"\Kloudian\svcac.exe -uninstall yes
@@ -32,6 +19,33 @@ C:\"Program Files (x86)"\Kloudian\svcac.exe -uninstall yes
 
 C:\"Program Files"\kloudian\"Orbweb Me"\Uninstall.exe /S
 C:\"Program Files (x86)"\kloudian\"Orbweb Me"\Uninstall.exe /S
+
+sc stop OU
+sc delete OU
+
+sc stop OD
+sc delete OD
+
+sc stop OM
+sc delete OM
+
+rem //stop the TSPlus service
+sc stop SVCM
+
+rem //delete the TSPlus service
+sc delete SVCM
+
+rem //stop RDP port redirector service
+sc stop UmRdpService
+
+rem //stop remote desktop service
+sc stop TermService
+
+rem //delete dependent service for remote desktop service
+sc config TermService depend= /
+
+rem //start native remote desktop service
+sc start TermService
 
 rem remove the firewall rule
 netsh advfirewall firewall delete rule name=\"Orbweb HTTP\"
@@ -42,7 +56,7 @@ netsh advfirewall firewall delete rule name=\"Orbweb Daemon Service\"
 
 rmdir /s /q C:\"Program Files"\Kloudian
 rmdir /s /q C:\"Program Files (x86)"\Kloudian
-rmdir /s /q C:\ProgramData\Orbweb
+rem rmdir /s /q C:\ProgramData\Orbweb
 rmdir /S /Q C:\ProgramData\Microsoft\Windows\"Start Menu"\Programs\Kloudian
 
 rem delete OrbwebAdmin
